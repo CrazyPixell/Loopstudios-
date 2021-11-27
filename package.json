@@ -1,0 +1,14 @@
+{
+  "name": "looplandpage",
+  "version": "1.0.0",
+  "description": "Loopstudious landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass main.scss css/style.css"
+  },
+  "author": "CrazyPixell",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.43.5"
+  }
+}
