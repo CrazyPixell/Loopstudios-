@@ -4,7 +4,7 @@
   "description": "Loopstudious landing page",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass main.scss css/style.css"
+    "compile:sass": "sass sass/main.scss css/style.css -w"
   },
   "author": "CrazyPixell",
   "license": "ISC",

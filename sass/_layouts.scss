@@ -1,0 +1,420 @@
+// HEADER
+.header {
+  height: 100vh;
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 3rem;
+
+    @include responsive(desktop) {
+      padding: 6rem 16rem;
+    }
+  }
+
+  &__logo {
+    width: 45%;
+
+    @include responsive(desktop) {
+      width: 20%;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include responsive(tab-land) {
+      display: block;
+      color: var(--clr-text-white);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 3rem;
+    font-weight: 300;
+    border: 3px solid var(--clr-text-white);
+    font-family: var(--ff-headings);
+    text-transform: uppercase;
+    font-size: 7.5rem;
+    color: var(--clr-text-white);
+
+    @include responsive(desktop) {
+      width: 40%;
+      left: 30%;
+    }
+  }
+}
+
+// MOBILE NAVIGATION
+.mobile-nav {
+  position: absolute;
+  width: 100vw;
+
+  @include responsive(tab-land) {
+    display: none;
+  }
+  &__list {
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--clr-text-white);
+    backdrop-filter: blur(1rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    visibility: hidden;
+  }
+
+  &__btn {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    z-index: 10;
+    left: 85%;
+    top: 6rem;
+    z-index: 100;
+  }
+  &__icon {
+    display: block;
+    width: 70%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    &:after {
+      @include mobile-btn;
+      top: -1rem;
+    }
+
+    &:before {
+      @include mobile-btn;
+      bottom: -1rem;
+    }
+  }
+}
+
+// NAVIGATION
+.nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include responsive(tab-land) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      color: inherit;
+    }
+  }
+}
+
+// SECTION ABOUT
+.section-about {
+  padding: 20rem 5% 0;
+
+  @include responsive(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20rem 10% 0;
+  }
+}
+
+.about-img {
+  width: 100%;
+  margin-bottom: 4rem;
+
+  @include responsive(tab-land) {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  @include responsive(desktop) {
+    width: 100%;
+  }
+}
+
+.about-title {
+  @include responsive(desktop) {
+    text-align: left;
+  }
+}
+
+.about-text-box {
+  margin-top: 3rem;
+
+  @include responsive(desktop) {
+    width: 90%;
+    align-self: end;
+    margin-left: -15rem;
+    background-color: var(--clr-text-white);
+    padding: 10rem 0 0 10rem;
+  }
+}
+
+.about-text {
+  margin-top: 3rem;
+  font-size: 3rem;
+  line-height: 1.6;
+  text-align: center;
+
+  @include responsive(desktop) {
+    text-align: left;
+    font-size: 2.4rem;
+  }
+}
+
+// SECTION SHOWCASE
+.section-showcase {
+  padding: 17rem 5% 17rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4.4rem;
+
+  @include responsive(tab-port) {
+    padding: 17rem 2% 17rem;
+  }
+
+  @include responsive(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+
+  @include responsive(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 17rem 10% 17rem;
+    column-gap: 3rem;
+  }
+}
+
+.showcase-btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 1.4rem 4rem;
+    justify-self: center;
+    text-transform: uppercase;
+    color: var(--clr-text-dark);
+    border: 3px solid var(--clr-text-dark);
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-align: center;
+
+    @include responsive(tab-land) {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
+    }
+
+    @include responsive(desktop) {
+      grid-column: 3 / span 2;
+    }
+  }
+}
+
+.showcase-item {
+  background-repeat: no-repeat;
+
+  @include responsive(tab-port) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include responsive(tab-land) {
+    width: 100%;
+  }
+
+  @include responsive(desktop) {
+    width: 100%;
+    background-size: cover;
+  }
+
+  &__text {
+    width: 30%;
+    padding: 7rem 3rem 3rem;
+    font-family: var(--ff-headings);
+    font-weight: 300;
+    color: #eee;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+
+    @include responsive(desktop) {
+      padding: 30rem 1.5rem 1.5rem;
+    }
+  }
+
+  &--1 {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-deep-earth.jpg);
+    }
+  }
+
+  &--2 {
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-night-arcade.jpg);
+    }
+  }
+
+  &--3 {
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-soccer-team.jpg);
+    }
+  }
+
+  &--4 {
+    background-image: url(../images/mobile/image-grid.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-grid.jpg);
+    }
+  }
+
+  &--5 {
+    background-image: url(../images/mobile/image-from-above.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-from-above.jpg);
+    }
+  }
+
+  &--6 {
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-pocket-borealis.jpg);
+    }
+  }
+
+  &--7 {
+    background-image: url(../images/mobile/image-curiosity.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-curiosity.jpg);
+    }
+  }
+
+  &--8 {
+    background-image: url(../images/mobile/image-fisheye.jpg);
+
+    @include responsive(desktop) {
+      background-image: url(../images/desktop/image-fisheye.jpg);
+    }
+  }
+}
+
+// FOOTER
+.footer {
+  background-color: var(--clr-text-dark);
+  text-align: center;
+  color: var(--clr-text-white);
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &__content {
+    @include responsive(desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 10rem 10% 0;
+    }
+  }
+
+  &__logo {
+    width: 40%;
+    margin-bottom: 4rem;
+
+    @include responsive(desktop) {
+      grid-column: 1 / span 1;
+      width: 30%;
+    }
+  }
+
+  &__social {
+    margin-top: 4rem;
+    &-icon {
+      color: var(--clr-text-white);
+      font-size: 4rem;
+    }
+    &-link {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+
+    @include responsive(desktop) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+      margin-top: 0;
+    }
+  }
+
+  &__nav {
+    @include responsive(desktop) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__copyright {
+    color: var(--clr-grey-2);
+    font-size: 2.4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    @include responsive(desktop) {
+      grid-column: 2 / span 1;
+      justify-self: end;
+      align-self: start;
+      margin-top: 0;
+    }
+  }
+
+  &__attribution a {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: #eee;
+    }
+  }
+}

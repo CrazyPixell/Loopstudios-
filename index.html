@@ -12,6 +12,12 @@
     />
 
     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- FONT AWESOME -->
     <link
@@ -22,10 +28,26 @@
     />
 
     <!-- CSS -->
-
+    <link rel="stylesheet" href="css/style.css" />
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body>
+    <!-- MOBILE NAVIGATION -->
+    <div class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Products</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
+      </ul>
+      <button class="mobile-nav__btn">
+        <span class="mobile-nav__icon"></span>
+      </button>
+    </div>
+
     <!-- HEADER -->
     <header class="header">
       <div class="header__upper">
@@ -34,6 +56,7 @@
           alt="Loopstudios logo"
           class="logo header__logo"
         />
+
         <nav class="nav header__nav">
           <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">About</a></li>
@@ -57,8 +80,8 @@
         alt="Interactive vr image"
         class="about-img"
       />
-      <div class="about-text">
-        <h2 class="section-title">The leader in interactive VR</h2>
+      <div class="about-text-box">
+        <h2 class="section-title about-title">The leader in interactive VR</h2>
         <p class="about-text">
           Founded in 2011, Loopstudios has been producing world-class virtual
           reality projects for some of the best companies around the globe. Our
@@ -70,20 +93,34 @@
 
     <!-- SECTION SHOWCASE -->
     <section class="section-showcase">
-      <div class="section-upper">
-        <h2 class="section-title">Our creations</h2>
-        <a href="#" class="btn">See all</a>
+      <h2 class="section-title showcase-title">Our creations</h2>
+
+      <div class="showcase-item showcase-item--1">
+        <p class="showcase-item__text">Deep earth</p>
       </div>
-      <div class="showcase">
-        <div class="showcase__item">Deep earth</div>
-        <div class="showcase__item">Night arcade</div>
-        <div class="showcase__item">Soccer team VR</div>
-        <div class="showcase__item">The grid</div>
-        <div class="showcase__item">From up above VR</div>
-        <div class="showcase__item">Pocket borealis</div>
-        <div class="showcase__item">The curiosity</div>
-        <div class="showcase__item">Make it fisheye</div>
+      <div class="showcase-item showcase-item--2">
+        <p class="showcase-item__text">Night arcade</p>
       </div>
+      <div class="showcase-item showcase-item--3">
+        <p class="showcase-item__text">Soccer team VR</p>
+      </div>
+      <div class="showcase-item showcase-item--4">
+        <p class="showcase-item__text">The grid</p>
+      </div>
+      <div class="showcase-item showcase-item--5">
+        <p class="showcase-item__text">From up above VR</p>
+      </div>
+      <div class="showcase-item showcase-item--6">
+        <p class="showcase-item__text">Pocket borealis</p>
+      </div>
+      <div class="showcase-item showcase-item--7">
+        <p class="showcase-item__text">The curiosity</p>
+      </div>
+      <div class="showcase-item showcase-item--8">
+        <p class="showcase-item__text">Make it fisheye</p>
+      </div>
+
+      <a href="#" class="showcase-btn">See all</a>
     </section>
 
     <!-- FOOTER -->
@@ -94,6 +131,19 @@
           alt="Loopstudios logo"
           class="logo footer__logo"
         />
+
+        <nav class="nav footer__nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Products</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
+          </ul>
+        </nav>
+
         <div class="footer__social">
           <a href="#" class="footer__social-link"
             ><i class="fab fa-facebook-square footer__social-icon"></i
@@ -108,28 +158,20 @@
             ><i class="fab fa-instagram footer__social-icon"></i
           ></a>
         </div>
-        <nav class="nav footer__nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Events</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Products</a>
-            </li>
-            <li class="nav__item"><a href="#" class="nav__link">Support</a></li>
-          </ul>
-        </nav>
+
         <div class="footer__copyright">
           © 2021 Loopstudios. All rights reserved.
         </div>
       </div>
 
-      <div class="attribution">
+      <div class="footer__attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">CrazyPixell</a>.
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
