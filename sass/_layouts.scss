@@ -6,6 +6,10 @@
   background-size: cover;
   position: relative;
 
+  @include responsive(desktop) {
+    background-image: url(../images/desktop/image-hero.jpg);
+  }
+
   &__upper {
     display: flex;
     justify-content: space-between;
